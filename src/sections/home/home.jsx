@@ -1,9 +1,11 @@
+import React from "react"
 import { Fragment } from "react"
 import styled from "styled-components"
 import { colors } from "../../constants"
 import surajPhoto from '../../assets/suraj-photo.png'
 
 const HeroBanner = styled.div`
+    margin-top: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,7 +20,17 @@ const HeroText = styled.h1`
 const AccentText = styled.span`
     color: ${colors.accent};
 `
-const HomeSection = () => {
+
+const IntroWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+`
+const IntroText = styled.h2`
+    font-size: 2.5rem;
+`
+const HomeSection = React.forwardRef((props, aboutRef) => {
     return(
         <Fragment>
             <HeroBanner>
@@ -28,8 +40,22 @@ const HomeSection = () => {
                     <AccentText> Suraj Thotakura</AccentText>
                 </HeroText>
             </HeroBanner>
+            <IntroWrapper ref={aboutRef}>
+                <IntroText>
+                    Designer
+                    <AccentText>.</AccentText>
+                </IntroText>
+                <IntroText>
+                    Developer
+                    <AccentText>.</AccentText>
+                </IntroText>
+                <IntroText>
+                    Human
+                    <AccentText>.</AccentText>
+                </IntroText>
+            </IntroWrapper>
         </Fragment>
     )
-}
+})
 
 export default HomeSection

@@ -4,6 +4,7 @@ import Header from './components/header/header'
 import About from './sections/about/about'
 import HomeSection from './sections/home/home'
 import ProjectsSection from './sections/projects/projects'
+import { useRef } from 'react'
 
 const Main = styled.main`
   display: flex;
@@ -14,15 +15,25 @@ const Main = styled.main`
 
 function App() {
 
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const connectRef = useRef(null);  
+
   return (
     <div className="App">
-      <Header/>
-      <Main>
-        <HomeSection/>
+      <Header
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        projectsRef={projectsRef}
+        connectRef={connectRef}
+      />
+      <Main ref={homeRef}>
+        <HomeSection ref={aboutRef}/>
         <About/>
-        <ProjectsSection/>
+        <ProjectsSection ref={projectsRef}/>
       </Main>
-      <Footer/>
+      <Footer ref={connectRef}/>
     </div>
   )
 }
