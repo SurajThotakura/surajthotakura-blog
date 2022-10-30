@@ -4,13 +4,13 @@ import Header from './components/header/header'
 import About from './sections/about/about'
 import HomeSection from './sections/home/home'
 import ProjectsSection from './sections/projects/projects'
+import ArrowIcon from './components/ArrowIcon'
 import { useRef } from 'react'
 
 const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
 `
 
 function App() {
@@ -29,9 +29,12 @@ function App() {
         connectRef={connectRef}
       />
       <Main ref={homeRef}>
-        <HomeSection ref={aboutRef}/>
+        <HomeSection/>
+        <ArrowIcon ref={aboutRef}/>
         <About/>
-        <ProjectsSection ref={projectsRef}/>
+        <ArrowIcon ref={projectsRef}/>
+        <ProjectsSection/>
+        <ArrowIcon/>
       </Main>
       <Footer ref={connectRef}/>
     </div>

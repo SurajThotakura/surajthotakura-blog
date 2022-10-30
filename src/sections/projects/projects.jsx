@@ -4,7 +4,6 @@ import { colors } from "../../constants"
 import { ArrowForward28Filled } from '@fluentui/react-icons'
 import boardsmashPreview from '../../assets/boardsmash-preview.png'
 import doMathPreview from '../../assets/doMath-preview.png'
-import ArrowIcon from "../../components/ArrowIcon"
 
 const ProjectsWrapper = styled.div`
     display: flex;
@@ -64,10 +63,9 @@ const ProjectLink = styled.a`
     }
 `
 
-const ProjectsSection = React.forwardRef((props, projectsRef) => {
+const ProjectsSection = () => {
     return(
         <ProjectsWrapper>
-            <ArrowIcon ref={projectsRef}/>
             <Project>
                 <LeftTextSection>
                     <ProjectTitle>doMath</ProjectTitle>
@@ -91,9 +89,8 @@ const ProjectsSection = React.forwardRef((props, projectsRef) => {
                     </ProjectLink>
                 </RightTextSection>
             </Project>
-            <ArrowIcon/>
         </ProjectsWrapper>
     )
-})
+}
 
 export default ProjectsSection

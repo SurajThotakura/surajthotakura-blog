@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Timeline from "../../components/timeline/timeline"
 import skills from "../../assets/skills.svg"
-import ArrowIcon from "../../components/ArrowIcon"
 import { Fragment } from "react"
 
 
@@ -61,10 +60,9 @@ const workExperience ={
     ]
 }
 
-const About = () => {
+const About = ()=> {
     return(
         <Fragment>
-            <ArrowIcon/>
             <StyledSection>
                 <Intro>
                     I am a product designer at Webex (Cisco), with a background in UI/UX design and front-end web development. I love to create meaningful experiences through design and creative thinking.

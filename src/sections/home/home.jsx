@@ -1,21 +1,22 @@
 import React from "react"
-import { Fragment } from "react"
 import styled from "styled-components"
 import { colors } from "../../constants"
 import surajPhoto from '../../assets/suraj-photo.png'
+import PolygonPond from "../../components/polygonPond/polygonPond"
 
 const HeroBanner = styled.div`
-    margin-top: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
+    user-select: none;
 `
 
 const HeroText = styled.h1`
     font-size: 4rem;
     width: 22.5rem;
+    user-select: none;
 `
 const AccentText = styled.span`
     color: ${colors.accent};
@@ -26,13 +27,15 @@ const IntroWrapper = styled.div`
     flex-direction: row;
     gap: 2rem;
     justify-content: center;
+    user-select: none;
 `
 const IntroText = styled.h2`
     font-size: 2.5rem;
+    user-select: none;
 `
 const HomeSection = React.forwardRef((props, aboutRef) => {
     return(
-        <Fragment>
+        <PolygonPond>
             <HeroBanner>
                 <img src={surajPhoto} alt="Suraj's Photo"/>
                 <HeroText>
@@ -40,7 +43,7 @@ const HomeSection = React.forwardRef((props, aboutRef) => {
                     <AccentText> Suraj Thotakura</AccentText>
                 </HeroText>
             </HeroBanner>
-            <IntroWrapper ref={aboutRef}>
+            <IntroWrapper>
                 <IntroText>
                     Designer
                     <AccentText>.</AccentText>
@@ -54,7 +57,7 @@ const HomeSection = React.forwardRef((props, aboutRef) => {
                     <AccentText>.</AccentText>
                 </IntroText>
             </IntroWrapper>
-        </Fragment>
+        </PolygonPond>
     )
 })
 

@@ -5,6 +5,7 @@ const NavBar = styled.nav`
     display: flex;
     justify-content: center;
     position: fixed;
+    z-index: 2;
     top: 0;
     width: 100%;
     backdrop-filter: blur(16px);
