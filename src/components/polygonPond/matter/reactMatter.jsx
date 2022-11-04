@@ -131,7 +131,7 @@ const Scene = () => {
   let counter = 0;
 
   Events.on(engine, 'afterUpdate', function(event) {
-    engine.timing.timeScale = 0.05;
+    engine.timing.timeScale = 0.1;
     counter += 1;
     if (counter >= 60 * .5) {
         // create some random forces

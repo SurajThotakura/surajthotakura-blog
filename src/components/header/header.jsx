@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import surajThotakuraIcon from "../../assets/suraj-thotakura-logo.svg"
+import surajThotakuraIcon from "../../assets/suraj-thotakura-logo.svg";
 
 const NavBar = styled.nav`
   padding: 1.5rem;
@@ -37,7 +37,7 @@ const Logo = styled.img`
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 const Header = (props) => {
   return (

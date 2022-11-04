@@ -68,7 +68,7 @@ const About = () => {
           design and front-end web development. I love to create meaningful
           experiences through design and creative thinking.
         </Intro>
-        <img src={skills} />
+        <img src={skills} alt="Skills Icons"/>
         <QualificationsWrapper>
           <Timeline
             title={workExperience.title}

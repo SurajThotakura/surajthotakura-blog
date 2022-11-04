@@ -81,11 +81,11 @@ const ProjectsSection = () => {
             <ArrowForward28Filled />
           </ProjectLink>
         </LeftTextSection>
-        <img src={doMathPreview} />
+        <img src={doMathPreview} alt="doMath Website Preview"/>
       </Project>
 
       <Project>
-        <img src={boardsmashPreview} />
+        <img src={boardsmashPreview} alt="Boardsmash Website Preview"/>
         <RightTextSection>
           <ProjectTitle>Board Smash </ProjectTitle>
           <ProjectInfo>

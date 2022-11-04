@@ -33,28 +33,28 @@ const Footer = React.forwardRef((props, connectRef) => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={linkedin} />
+          <img src={linkedin} alt="Linkedin Icon"/>
         </a>
         <a
           href="https://dribbble.com/surajsatya007"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={dribbble} />
+          <img src={dribbble} alt="Dribbble Icon"/>
         </a>
         <a
           href="https://github.com/SurajThotakura"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={github} />
+          <img src={github} alt="GitHub Icon"/>
         </a>
         <a
           href="https://codepen.io/suraj-thotakura"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={codepen} />
+          <img src={codepen} alt="Codepen Icon"/>
         </a>
       </IconsWrapper>
     </StyledFooter>
