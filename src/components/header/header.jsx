@@ -31,7 +31,7 @@ const ListItem = styled.li`
   }
 `;
 
-const Logo = styled.img`
+const Logo = styled.li`
   height: 3rem;
   width: 3rem;
   &:hover {
@@ -64,7 +64,11 @@ const Header = (props) => {
           >
             About Me
           </ListItem>
-          <Logo src={surajThotakuraIcon} alt="surajThotakuraIcon" />
+          <Logo>
+            <a href="https://www.surajthotakura.com/">
+              <img src={surajThotakuraIcon} alt="surajThotakuraIcon" />
+            </a>
+          </Logo>
           <ListItem
             onClick={() =>
               props.projectsRef.current.scrollIntoView({
