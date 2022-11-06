@@ -6,6 +6,7 @@ import HomeSection from "./sections/home/home";
 import ProjectsSection from "./sections/projects/projects";
 import ArrowIcon from "./components/ArrowIcon";
 import { useRef, useEffect } from "react";
+import Connect from "./sections/connect/connect";
 
 const Main = styled.main`
   display: flex;
@@ -48,9 +49,10 @@ function App() {
         <About />
         <ArrowIcon ref={projectsRef} />
         <ProjectsSection />
-        <ArrowIcon />
+        <ArrowIcon ref={connectRef} />
+        <Connect />
       </Main>
-      <Footer ref={connectRef} />
+      <Footer />
     </div>
   );
 }

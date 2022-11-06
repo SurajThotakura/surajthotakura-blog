@@ -4,6 +4,11 @@ import linkedin from "../../assets/linkedin.svg";
 import dribbble from "../../assets/dribbble.svg";
 import github from "../../assets/github.svg";
 import codepen from "../../assets/codepen.svg";
+import { colors } from "../../constants";
+
+const AccentText = styled.span`
+  color: ${colors.accent};
+`;
 
 const StyledFooter = styled.footer`
   margin-top: 2.5rem;
@@ -23,42 +28,44 @@ const IconsWrapper = styled.div`
   gap: 5rem;
   margin-bottom: 2.5rem;
 `;
-const Footer = React.forwardRef((props, connectRef) => {
+const Footer = () => {
   return (
-    <StyledFooter ref={connectRef}>
-      <StyledHeading>Find me on</StyledHeading>
+    <StyledFooter>
+      <StyledHeading>
+        Also<AccentText>,</AccentText> you can find me on
+      </StyledHeading>
       <IconsWrapper>
         <a
           href="https://www.linkedin.com/in/surajthotakura007/"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={linkedin} alt="Linkedin Icon"/>
+          <img src={linkedin} alt="Linkedin Icon" />
         </a>
         <a
           href="https://dribbble.com/surajsatya007"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={dribbble} alt="Dribbble Icon"/>
+          <img src={dribbble} alt="Dribbble Icon" />
         </a>
         <a
           href="https://github.com/SurajThotakura"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={github} alt="GitHub Icon"/>
+          <img src={github} alt="GitHub Icon" />
         </a>
         <a
           href="https://codepen.io/suraj-thotakura"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={codepen} alt="Codepen Icon"/>
+          <img src={codepen} alt="Codepen Icon" />
         </a>
       </IconsWrapper>
     </StyledFooter>
   );
-});
+};
 
 export default Footer;

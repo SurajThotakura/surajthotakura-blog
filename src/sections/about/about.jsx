@@ -1,23 +1,81 @@
 import React from "react";
 import styled from "styled-components";
 import Timeline from "../../components/timeline/timeline";
-import skills from "../../assets/skills.svg";
+import robot from "../../assets/about/robot.svg";
+import PSP from "../../assets/about/PSP.svg";
+import atmos from "../../assets/about/atmos.svg";
+import college from "../../assets/about/college.svg";
+import theMakings from "../../assets/about/theMakings.svg";
 import { Fragment } from "react";
+import HeartBeat from "../../components/heartBeat";
+import { colors } from "../../constants";
+
+const AccentText = styled.span`
+  color: ${colors.accent};
+`;
 
 const StyledSection = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 48rem;
-  gap: 5rem;
+  padding: 0 2.5rem;
+  gap: 7rem;
 `;
 
 const Intro = styled.div`
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+`;
+
+const IntroHero = styled.div`
+  font-size: 2.5rem;
+  line-height: 4rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+`;
+
+const IntroHeroLine = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: ${(props) => (props.gap ? props.gap : 0)};
+`;
+
+const IntroContent = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+const IntroEnd = styled.span`
+  margin-top: 4rem;
+  width: 40rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+`;
+const LastLine = styled.p`
+  margin-top: 1rem;
+`;
+const RobotWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 `;
 
 const QualificationsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6rem;
+`;
+
+const TimelieWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
@@ -64,17 +122,50 @@ const About = () => {
     <Fragment>
       <StyledSection>
         <Intro>
-          I am a product designer at Webex (Cisco), with a background in UI/UX
-          design and front-end web development. I love to create meaningful
-          experiences through design and creative thinking.
+          <IntroHero>
+            <IntroHeroLine>
+              What can I say <AccentText>,</AccentText>
+            </IntroHeroLine>
+            <IntroHeroLine gap={"1rem"}>
+              I just love <HeartBeat />
+            </IntroHeroLine>
+            <IntroHeroLine>
+              building things<AccentText>.</AccentText>
+            </IntroHeroLine>
+          </IntroHero>
+          <IntroContent>
+            <RobotWrapper>
+              <img src={robot} alt="cardboard robot" />
+              <img src={PSP} alt="PSP and PC with 256MB RAM" />
+            </RobotWrapper>
+            <img src={atmos} alt="Atmos website" />
+            <img src={college} alt="Suraj in his college" />
+            <IntroEnd>
+              Now, I build websites, design systems, conduct user interviews and
+              of course, design and code every single day.
+              <br />I believe all I want to do is bring ideas to life with{" "}
+              <b>
+                design<AccentText>+</AccentText>code<AccentText>.</AccentText>
+              </b>
+              <LastLine>
+                So here I am,{" "}
+                <b>
+                  Designer<AccentText>.</AccentText> Developer
+                  <AccentText>.</AccentText> Human<AccentText>.</AccentText>
+                </b>
+              </LastLine>
+            </IntroEnd>
+          </IntroContent>
         </Intro>
-        <img src={skills} alt="Skills Icons"/>
         <QualificationsWrapper>
-          <Timeline
-            title={workExperience.title}
-            infoArray={workExperience.info}
-          />
-          <Timeline title={education.title} infoArray={education.info} />
+          <TimelieWrapper>
+            <Timeline
+              title={workExperience.title}
+              infoArray={workExperience.info}
+            />
+            <Timeline title={education.title} infoArray={education.info} />
+          </TimelieWrapper>
+          <img src={theMakings} alt="#The-Makings" />
         </QualificationsWrapper>
       </StyledSection>
     </Fragment>
