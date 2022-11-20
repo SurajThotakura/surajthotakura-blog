@@ -1,4 +1,5 @@
 import { Open20Filled } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import surajThotakuraIcon from "../../assets/suraj-thotakura-logo.svg";
 import { colors } from "../../constants";
@@ -87,6 +88,15 @@ const PondButton = styled.li`
   }
 `;
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${colors.fontBlack};
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
+
 const Header = (props) => {
   return (
     <header>
@@ -134,10 +144,12 @@ const Header = (props) => {
           </ListItem>
         </HeaderListLeft>
         <HeaderListRight>
-          <PondButton>
-            Pond
-            <Open20Filled color={colors.accent} />
-          </PondButton>
+          <StyledLink to="/pond">
+            <PondButton >
+              Pond
+              <Open20Filled color={colors.accent} />
+            </PondButton>
+          </StyledLink>
         </HeaderListRight>
       </NavBar>
     </header>
