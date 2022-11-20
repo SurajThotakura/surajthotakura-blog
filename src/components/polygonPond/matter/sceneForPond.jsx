@@ -35,7 +35,7 @@ import {
   
   const starOptions = {
     frictionAir: 0.05,
-    friction: 0,
+    friction: 0.1,
     restitution: 0.7,
     isStatic: false,
     rotate: 10,
@@ -45,7 +45,7 @@ import {
     const scene = useRef();
     const canvasRef = useRef(null);
   
-    const matterStarsLarge = svgArray.map((x) => {
+    const matterStarsSmall = svgArray.map((x) => {
       return Bodies.circle(
         FULL_WIDTH * Math.random(),
         FULL_HEIGHT * Math.random(),
@@ -58,6 +58,25 @@ import {
               texture: x,
               xScale: starSize / 600,
               yScale: starSize / 600,
+            },
+          },
+        }
+      );
+    });
+
+    const matterStarsLarge = svgArray.map((x) => {
+      return Bodies.circle(
+        FULL_WIDTH * Math.random(),
+        FULL_HEIGHT * Math.random(),
+        starSize * 0.275,
+        {
+          label: "starOne",
+          ...starOptions,
+          render: {
+            sprite: {
+              texture: x,
+              xScale: starSize / 400,
+              yScale: starSize / 400,
             },
           },
         }
@@ -122,8 +141,9 @@ import {
           label: "wall_right",
         }),
       ]);
-  
+ 
       Composite.add(world, [...matterStarsLarge]);
+      Composite.add(world, [...matterStarsSmall]);
   
       const explosion = function (engine) {
         const bodies = Composite.allBodies(engine.world);
@@ -149,7 +169,7 @@ import {
       Events.on(engine, "afterUpdate", function (event) {
         engine.timing.timeScale = 0.5;
         counter += 1;
-        if (counter >= 60 * 0.5) {
+        if (counter >= 240 * 0.5) {
           // create some random forces
           explosion(engine);
   
