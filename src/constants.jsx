@@ -10,3 +10,6 @@ export const colors = {
 
 export const HEIGHT = window.innerHeight - 136;
 export const WIDTH = window.innerWidth - 80;
+
+export const FULL_HEIGHT = window.innerHeight;
+export const FULL_WIDTH = window.innerWidth;

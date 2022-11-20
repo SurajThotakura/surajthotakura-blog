@@ -1,7 +1,8 @@
+import PolygonPondWithMouse from "../components/polygonPond/polygonPondWithMouse"
 
 const PondPage = () => {
     return (
-        <div>Hello</div>
+        <PolygonPondWithMouse/>
     )
 }
 

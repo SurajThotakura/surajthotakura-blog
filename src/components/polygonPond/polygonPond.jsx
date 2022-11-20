@@ -33,17 +33,6 @@ const PondWater = styled.div`
 `;
 
 const PolygonPond = ({ children }) => {
-  const mousePosition = (e) => {
-    let xValue = e.x;
-    let yValue = e.y;
-    const HEIGHT = window.innerHeight - 136;
-    const WIDTH = window.innerWidth - 80;
-    let mousePosition = {
-      mousePosX: -2 + (xValue / WIDTH) * 4,
-      mousePosY: -2 + (yValue / HEIGHT) * 4,
-    };
-    return mousePosition;
-  };
   return (
     <Pond>
       <PondContent>{children}</PondContent>
