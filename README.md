@@ -34,5 +34,5 @@
 </div>
 
   <h1 align="center">
-<a href="https://surajthotakura.com/" target="_blank" rel="noreferrer noopener">Visit website</a>
+<a href="https://www.surajthotakura.com/" target="_blank" rel="noreferrer noopener">Visit website</a>
 </h1>
