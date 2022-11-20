@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Timeline from "../../components/timeline/timeline";
+import StoryBlock from "../../components/storyBlock/storyBlock";
 import robot from "../../assets/about/robot.svg";
 import PSP from "../../assets/about/PSP.svg";
 import atmos from "../../assets/about/atmos.svg";
@@ -52,20 +53,17 @@ const IntroContent = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
 const IntroEnd = styled.span`
-  margin-top: 4rem;
+  margin-top: 6rem;
   width: 40rem;
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 2rem;
 `;
+
 const LastLine = styled.p`
   margin-top: 1rem;
-`;
-const RobotWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 `;
 
 const QualificationsWrapper = styled.div`
@@ -117,6 +115,25 @@ const workExperience = {
   ],
 };
 
+const storyLine = [
+  {
+    src: robot,
+    alt: "cardboard robot",
+  },
+  {
+    src: PSP,
+    alt: "PSP and PC with 256MB RAM",
+  },
+  {
+    src: atmos,
+    alt: "Atmos website",
+  },
+  {
+    src: college,
+    alt: "Suraj in his college",
+  },
+];
+
 const About = () => {
   return (
     <Fragment>
@@ -134,12 +151,7 @@ const About = () => {
             </IntroHeroLine>
           </IntroHero>
           <IntroContent>
-            <RobotWrapper>
-              <img src={robot} alt="cardboard robot" />
-              <img src={PSP} alt="PSP and PC with 256MB RAM" />
-            </RobotWrapper>
-            <img src={atmos} alt="Atmos website" />
-            <img src={college} alt="Suraj in his college" />
+            <StoryBlock storyLine={storyLine}/>
             <IntroEnd>
               Now, I build websites, design systems, conduct user interviews and
               of course, design and code every single day.
