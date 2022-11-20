@@ -1,4 +1,4 @@
-import React , {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 
 const StoryLine = styled.div`
@@ -21,17 +21,14 @@ const StoryImage = styled.img`
   }
 `;
 
-const StoryBlock = ({
-  storyLine
-}) => {
-
+const StoryBlock = ({ storyLine }) => {
   const storyRefArray = useRef([]);
 
   const callbackFunction = (entries) => {
-    entries.map(entry => {
+    entries.map((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.toggle("show", entry.isIntersecting)
-        observer.unobserve(entry.target)
+        entry.target.classList.toggle("show", entry.isIntersecting);
+        observer.unobserve(entry.target);
       }
     });
   };
@@ -46,7 +43,7 @@ const StoryBlock = ({
   useEffect(() => {
     storyRefArray.current.forEach((ref) => {
       observer.observe(ref);
-    })
+    });
   }, [storyRefArray.current, options]);
 
   return (

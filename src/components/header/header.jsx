@@ -89,12 +89,16 @@ const PondButton = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: ${colors.fontBlack};
+  text-decoration: none;
+  color: ${colors.fontBlack};
 
-    &:focus, &:hover, &:visited, &:link, &:active {
-        text-decoration: none;
-    }
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
 `;
 
 const Header = (props) => {
@@ -145,7 +149,7 @@ const Header = (props) => {
         </HeaderListLeft>
         <HeaderListRight>
           <StyledLink to="/pond">
-            <PondButton >
+            <PondButton>
               Pond
               <Open20Filled color={colors.accent} />
             </PondButton>
