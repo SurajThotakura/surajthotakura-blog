@@ -125,7 +125,7 @@ const ProjectsSection = () => {
       <Project>
         <LeftTextSection>
           <ProjectTitle>Keyboards</ProjectTitle>
-          <ProjectInfo>The clicks and clacks I love.</ProjectInfo>
+          <ProjectInfo>The clicks and clacks I love</ProjectInfo>
           <ProjectLink>
             Read More
             <ArrowForward28Filled />
