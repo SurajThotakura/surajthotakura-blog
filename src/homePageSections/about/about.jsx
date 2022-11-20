@@ -7,9 +7,11 @@ import PSP from "../../assets/about/PSP.svg";
 import atmos from "../../assets/about/atmos.svg";
 import college from "../../assets/about/college.svg";
 import theMakings from "../../assets/about/theMakings.svg";
+import resume from "../../assets/about/Suraj Resume 2022.pdf";
 import { Fragment } from "react";
 import HeartBeat from "../../components/heartBeat";
 import { colors } from "../../constants";
+import { ArrowDownload24Filled } from "@fluentui/react-icons";
 
 const AccentText = styled.span`
   color: ${colors.accent};
@@ -77,6 +79,29 @@ const TimelieWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
+`;
+
+const DownloadResume = styled.a`
+  color: ${colors.fontBlack};
+  padding: 0.5rem 1rem;
+  margin: auto;
+  width: 16rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid ${colors.fontBlack};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: 150ms;
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${colors.fontBlack};
+    color: ${colors.background};
+  }
 `;
 
 const education = {
@@ -151,7 +176,7 @@ const About = () => {
             </IntroHeroLine>
           </IntroHero>
           <IntroContent>
-            <StoryBlock storyLine={storyLine}/>
+            <StoryBlock storyLine={storyLine} />
             <IntroEnd>
               Now, I build websites, design systems, conduct user interviews and
               of course, design and code every single day.
@@ -179,6 +204,10 @@ const About = () => {
           </TimelieWrapper>
           <img src={theMakings} alt="#The-Makings" />
         </QualificationsWrapper>
+        <DownloadResume href={resume} target="_blank" rel="noreferrer noopener">
+          Download Resume
+          <ArrowDownload24Filled />
+        </DownloadResume>
       </StyledSection>
     </Fragment>
   );
