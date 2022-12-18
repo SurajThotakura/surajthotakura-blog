@@ -1,12 +1,14 @@
-import { Open20Filled } from "@fluentui/react-icons";
+import { ArrowDownload24Filled, Open20Filled } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import resume from "../../assets/about/Suraj Resume 2022.pdf";
 import surajThotakuraIcon from "../../assets/suraj-thotakura-logo.svg";
 import { colors } from "../../constants";
 
 const AccentText = styled.span`
   color: ${colors.accent};
   font-size: 1.25rem;
+  font-weight: 700;
   line-height: 1.5rem;
 `;
 
@@ -101,6 +103,19 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const ResumeLink = styled.a`
+  text-decoration: none;
+  color: ${colors.fontBlack};
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
 const Header = (props) => {
   return (
     <header>
@@ -144,7 +159,13 @@ const Header = (props) => {
               })
             }
           >
-            Connect<AccentText accentSize={"1rem"}>.</AccentText>
+            Connect<AccentText accentSize={"1rem"}>↗</AccentText>
+          </ListItem>
+          <ListItem>
+            <ResumeLink href={resume} target="_blank" rel="noreferrer noopener">
+              Resume
+            </ResumeLink>
+            <AccentText accentSize={"1rem"}>↯</AccentText>
           </ListItem>
         </HeaderListLeft>
         <HeaderListRight>
