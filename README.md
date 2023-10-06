@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="./src/assets/suraj-thotakura-logo.svg" alt="logo" width="100" height="auto" />
+  <img src="/assets/suraj-thotakura-logo.svg" alt="logo" width="100" height="auto" />
   <br />
   <h1>Suraj Thotakura</h1>
   

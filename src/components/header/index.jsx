@@ -1,8 +1,8 @@
 import { ArrowDownload24Filled, Open20Filled } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import resume from "../../assets/about/Suraj Resume 2022.pdf";
-import surajThotakuraIcon from "../../assets/suraj-thotakura-logo.svg";
+import resume from "/assets/about/Suraj Resume 2022.pdf";
+import surajThotakuraIcon from "/assets/suraj-thotakura-logo.svg";
 import { colors } from "../../constants";
 
 const AccentText = styled.span`

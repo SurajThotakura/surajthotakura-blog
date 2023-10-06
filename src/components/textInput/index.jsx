@@ -8,13 +8,13 @@ const TextInputWrapper = styled.div`
   align-items: flex-start;
   gap: 0.5rem;
 `;
-const StyledLable = styled.label`
+const StyledLabel = styled.label`
   font-size: 1.5rem;
   font-weight: 300;
 `;
 const StyledInput = styled.input`
   font-family: "Lexend", Helvetica, Arial, sans-serif;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   height: ${(props) => props.height};
   width: ${(props) => props.width};
   font-size: 1.5rem;
@@ -30,10 +30,10 @@ const StyledInput = styled.input`
 `;
 
 const TextInput = React.forwardRef(
-  ({ lable, height = "3rem", width = "30rem" }, ref) => {
+  ({ label, height = "3rem", width = "30rem" }, ref) => {
     return (
       <TextInputWrapper>
-        <StyledLable>{lable}</StyledLable>
+        <StyledLabel>{label}</StyledLabel>
         <StyledInput type="text" height={height} width={width} ref={ref} />
       </TextInputWrapper>
     );

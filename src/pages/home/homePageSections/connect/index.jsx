@@ -1,7 +1,8 @@
 import { ArrowForward28Filled } from "@fluentui/react-icons";
 import styled from "styled-components";
-import TextInput from "../../components/textInput/textInput";
-import { colors } from "../../constants";
+import TextInput from "../../../../components/textInput";
+import { colors } from "../../../../constants";
+import TextArea from "../../../../components/textArea";
 
 const AccentText = styled.span`
   color: ${colors.accent};
@@ -77,9 +78,9 @@ const Connect = () => {
         </IntroContent>
       </ConnectIntro>
       <ConnectForm>
-        <TextInput lable={"Name"} />
-        <TextInput lable={"Email"} />
-        <TextInput lable={"Message"} height={"10rem"} />
+        <TextInput label={"Name"} />
+        <TextInput label={"Email"} />
+        <TextArea label={"Message"} height={"10rem"} />
         <SendMessage>
           Send Message
           <ArrowForward28Filled />

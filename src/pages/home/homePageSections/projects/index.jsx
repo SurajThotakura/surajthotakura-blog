@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../constants";
+import { colors } from "../../../../constants";
 import { ArrowForward28Filled } from "@fluentui/react-icons";
-import noStrike from "../../assets/Work+Play/noStriked.svg";
-import boardsmashPreview from "../../assets/Work+Play/boardsmash-preview.png";
-import doMathPreview from "../../assets/Work+Play/doMath-preview.png";
-import keyboardsPreview from "../../assets/Work+Play/keyboards-preview.png";
+import noStrike from "/assets/Work+Play/noStriked.svg";
+import boardsmashPreview from "/assets/Work+Play/boardsmash-preview.png";
+import doMathPreview from "/assets/Work+Play/doMath-preview.png";
+import keyboardsPreview from "/assets/Work+Play/keyboards-preview.png";
 
 const AccentText = styled.span`
   color: ${colors.accent};

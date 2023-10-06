@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../constants";
-import surajPhoto from "../../assets/suraj-photo.png";
-import PolygonPond from "../../components/polygonPond/polygonPond";
+import { colors } from "../../../../constants";
+import surajPhoto from "/assets/suraj-photo.png";
+import { PolygonPond } from "../../../../components/polygonPond";
 
 const HeroBanner = styled.div`
   display: flex;

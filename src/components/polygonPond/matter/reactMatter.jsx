@@ -13,7 +13,7 @@ import {
   Common,
 } from "matter-js";
 import { useRef, useEffect } from "react";
-import svgArray from "../../../assets/Matter";
+import svgArray from "../MatterAssets";
 import { colors, HEIGHT, WIDTH } from "../../../constants";
 
 const WALLWIDTH = 0.1;

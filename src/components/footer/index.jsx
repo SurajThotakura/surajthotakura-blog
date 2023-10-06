@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import linkedin from "../../assets/linkedin.svg";
-import dribbble from "../../assets/dribbble.svg";
-import github from "../../assets/github.svg";
-import codepen from "../../assets/codepen.svg";
+import linkedin from "/assets/linkedin.svg";
+import dribbble from "/assets/dribbble.svg";
+import github from "/assets/github.svg";
+import codepen from "/assets/codepen.svg";
 import { colors } from "../../constants";
 
 const AccentText = styled.span`

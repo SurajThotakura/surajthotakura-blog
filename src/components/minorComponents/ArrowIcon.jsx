@@ -1,7 +1,7 @@
 import { ArrowCurveDownLeft28Filled } from "@fluentui/react-icons";
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { colors } from "../constants";
+import { colors } from "../../constants";
 
 const ArrowIconRotate = styled.div`
   color: ${colors.fontBlack};

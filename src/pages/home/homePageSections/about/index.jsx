@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Timeline from "../../components/timeline/timeline";
-import StoryBlock from "../../components/storyBlock/storyBlock";
-import robot from "../../assets/about/robot.svg";
-import PSP from "../../assets/about/PSP.svg";
-import atmos from "../../assets/about/atmos.svg";
-import college from "../../assets/about/college.svg";
-import theMakings from "../../assets/about/theMakings.svg";
-import resume from "../../assets/about/Suraj Resume 2022.pdf";
+import Timeline from "../../../../components/timeline";
+import StoryBlock from "../../../../components/storyBlock";
+import robot from "/assets/about/robot.svg";
+import PSP from "/assets/about/PSP.svg";
+import atmos from "/assets/about/atmos.svg";
+import college from "/assets/about/college.svg";
+import theMakings from "/assets/about/theMakings.svg";
+import resume from "/assets/about/Suraj Resume 2022.pdf";
+import HeartBeat from "../../../../components/minorComponents/heartBeat"
 import { Fragment } from "react";
-import HeartBeat from "../../components/heartBeat";
-import { colors } from "../../constants";
+import { colors } from "../../../../constants";
 import { ArrowDownload24Filled } from "@fluentui/react-icons";
 
 const AccentText = styled.span`

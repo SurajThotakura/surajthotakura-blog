@@ -1,4 +1,4 @@
-import HomePage from "./pages/homePage";
+import HomePage from "./pages/home";
 import PondPage from "./pages/pondPage";
 import { Route, Routes } from "react-router-dom";
 

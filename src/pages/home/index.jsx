@@ -1,12 +1,12 @@
 import { useRef } from "react";
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
-import About from "../homePageSections/about/about";
-import HomeSection from "../homePageSections/home/home";
-import ProjectsSection from "../homePageSections/projects/projects";
-import Connect from "../homePageSections/connect/connect";
-import ArrowIcon from "../components/ArrowIcon";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import ArrowIcon from "../../components/minorComponents/ArrowIcon";
 import styled from "styled-components";
+import HomeSection from "./homePageSections/home";
+import About from "./homePageSections/about";
+import ProjectsSection from "./homePageSections/projects";
+import Connect from "./homePageSections/connect";
 
 const Main = styled.main`
   display: flex;
