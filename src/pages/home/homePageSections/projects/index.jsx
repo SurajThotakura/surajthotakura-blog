@@ -6,6 +6,7 @@ import noStrike from "/assets/Work+Play/noStriked.svg";
 import boardsmashPreview from "/assets/Work+Play/boardsmash-preview.png";
 import doMathPreview from "/assets/Work+Play/doMath-preview.png";
 import keyboardsPreview from "/assets/Work+Play/keyboards-preview.png";
+import { Link } from "react-router-dom";
 
 const AccentText = styled.span`
   color: ${colors.accent};
@@ -126,10 +127,12 @@ const ProjectsSection = () => {
         <LeftTextSection>
           <ProjectTitle>Keyboards</ProjectTitle>
           <ProjectInfo>The clicks and clacks I love</ProjectInfo>
-          <ProjectLink>
-            Read More
-            <ArrowForward28Filled />
-          </ProjectLink>
+          <Link to="/inProgress" style={{ textDecoration: "none" }}>
+            <ProjectLink>
+              Read More
+              <ArrowForward28Filled />
+            </ProjectLink>
+          </Link>
         </LeftTextSection>
         <img src={keyboardsPreview} alt="Keyboards Case Study Preview" />
       </Project>

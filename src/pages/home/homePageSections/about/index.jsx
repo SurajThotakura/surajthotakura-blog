@@ -126,10 +126,16 @@ const workExperience = {
   title: "Work Experience",
   info: [
     {
-      institute: "Webex (Cisco)",
+      institute: "Cisco",
+      qualification: "Software Engineer",
+      from: 2023,
+      to: "Present",
+    },
+    {
+      institute: "Cisco",
       qualification: "Product Designer",
       from: 2020,
-      to: "Present",
+      to: 2023,
     },
     {
       institute: "IMI Mobile",

@@ -1,4 +1,4 @@
-import { PolygonPondWithMouse } from "../components/polygonPond";
+import { PolygonPondWithMouse } from "../../components/polygonPond";
 
 
 const PondPage = () => {
