@@ -14,6 +14,7 @@ const ConnectWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 4rem;
+  padding: 4rem 0 7rem 0;
 `;
 const ConnectIntro = styled.div`
   width: 26.25rem;
@@ -74,18 +75,11 @@ const Connect = () => {
           possible.
           <br /> <br />
           If you prefer to contact me directly, Email to:{" "}
-          <EmailLink>connect@surajthotakura.com</EmailLink>
+          <EmailLink href="mailto:surajsatya007@gmail.com">
+            surajsatya007@gmail.com
+          </EmailLink>
         </IntroContent>
       </ConnectIntro>
-      <ConnectForm>
-        <TextInput label={"Name"} />
-        <TextInput label={"Email"} />
-        <TextArea label={"Message"} height={"10rem"} />
-        <SendMessage>
-          Send Message
-          <ArrowForward28Filled />
-        </SendMessage>
-      </ConnectForm>
     </ConnectWrapper>
   );
 };

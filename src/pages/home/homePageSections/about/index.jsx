@@ -7,8 +7,8 @@ import PSP from "/assets/about/PSP.svg";
 import atmos from "/assets/about/atmos.svg";
 import college from "/assets/about/college.svg";
 import theMakings from "/assets/about/theMakings.svg";
-import resume from "/assets/about/Suraj Resume 2022.pdf";
-import HeartBeat from "../../../../components/minorComponents/heartBeat"
+import resume from "/assets/about/SurajResume2024.pdf";
+import HeartBeat from "../../../../components/minorComponents/heartBeat";
 import { Fragment } from "react";
 import { colors } from "../../../../constants";
 import { ArrowDownload24Filled } from "@fluentui/react-icons";
