@@ -251,7 +251,7 @@ const ProjectsSection = () => {
           <ProjectTitle>Board Smash </ProjectTitle>
           <ProjectInfo>
             Brace yourselves and <br /> click-clack!
-            <br /> Test your typing speed on this Monkeytype clone
+            <br /> Test your typing speed on this typing test game.
           </ProjectInfo>
           <Group>
             <ProjectLink
