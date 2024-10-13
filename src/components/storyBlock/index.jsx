@@ -1,11 +1,15 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
+import { mobileBreakPoint } from "../../constants";
 
 const StoryLine = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 6rem;
+  @media (max-width: ${mobileBreakPoint}) {
+    gap: 1.5rem;
+  }
 `;
 
 const StoryImage = styled.img`
@@ -18,6 +22,9 @@ const StoryImage = styled.img`
     opacity: 1;
     filter: blur(0);
     transform: scale3d(1, 1, 1);
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    width: calc(100vw - 2rem);
   }
 `;
 
@@ -34,8 +41,9 @@ const StoryBlock = ({ storyLine }) => {
   };
 
   const options = {
-    rootMargin: "-150px",
-    threshold: 1,
+    root: null, // null means observing relative to viewport
+    rootMargin: window.innerWidth <= 768 ? "0px" : "-50px", // Smaller root margin on mobile
+    threshold: 0.5,
   };
 
   const observer = new IntersectionObserver(callbackFunction, options);

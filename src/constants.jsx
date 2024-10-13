@@ -7,9 +7,16 @@ export const colors = {
   offWhite: "#EEF4F1",
   midBlue: "#D8D8F4",
 };
+export const mobileBreakPoint = "824px";
 
-export const HEIGHT = window.innerHeight - 136;
-export const WIDTH = window.innerWidth - 80;
+export const HEIGHT =
+  window.innerWidth > mobileBreakPoint
+    ? window.innerHeight - 136
+    : window.innerHeight;
+export const WIDTH =
+  window.innerWidth > mobileBreakPoint
+    ? window.innerWidth - 80
+    : window.innerWidth - 40;
 
 export const FULL_HEIGHT = window.innerHeight;
 export const FULL_WIDTH = window.innerWidth;

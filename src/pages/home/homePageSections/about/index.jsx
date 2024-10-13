@@ -10,7 +10,7 @@ import theMakings from "/assets/about/theMakings.svg";
 import resume from "/assets/about/SurajResume2024.pdf";
 import HeartBeat from "../../../../components/minorComponents/heartBeat";
 import { Fragment } from "react";
-import { colors } from "../../../../constants";
+import { colors, mobileBreakPoint } from "../../../../constants";
 import { ArrowDownload24Filled } from "@fluentui/react-icons";
 
 const AccentText = styled.span`
@@ -22,6 +22,9 @@ const StyledSection = styled.div`
   flex-direction: column;
   padding: 0 2.5rem;
   gap: 7rem;
+  @media (max-width: ${mobileBreakPoint}) {
+    padding: 0;
+  }
 `;
 
 const Intro = styled.div`
@@ -41,6 +44,12 @@ const IntroHero = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  @media (max-width: ${mobileBreakPoint}) {
+    font-size: 1.5rem;
+    flex-direction: column;
+    line-height: 2.5rem;
+    gap: 0.5rem;
+  }
 `;
 
 const IntroHeroLine = styled.div`
@@ -62,6 +71,13 @@ const IntroEnd = styled.span`
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 2rem;
+  @media (max-width: ${mobileBreakPoint}) {
+    font-size: 1rem;
+    width: calc(100vw - 2rem);
+    flex-direction: column;
+    line-height: 1.5rem;
+    gap: 0.5rem;
+  }
 `;
 
 const LastLine = styled.p`
@@ -101,6 +117,20 @@ const DownloadResume = styled.a`
     cursor: pointer;
     background-color: ${colors.fontBlack};
     color: ${colors.background};
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    width: 12rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+`;
+
+const TheMakings = styled.img`
+  display: block;
+  @media (max-width: ${mobileBreakPoint}) {
+    display: none;
   }
 `;
 
@@ -172,6 +202,9 @@ const About = () => {
         <Intro>
           <IntroHero>
             <IntroHeroLine>
+              About me<AccentText>?</AccentText>
+            </IntroHeroLine>
+            <IntroHeroLine>
               What can I say <AccentText>,</AccentText>
             </IntroHeroLine>
             <IntroHeroLine gap={"1rem"}>
@@ -184,17 +217,18 @@ const About = () => {
           <IntroContent>
             <StoryBlock storyLine={storyLine} />
             <IntroEnd>
-              Now, I build websites, design systems, conduct user interviews and
-              of course, design and code every single day.
-              <br />I believe all I want to do is bring ideas to life with{" "}
-              <b>
-                design<AccentText>+</AccentText>code<AccentText>.</AccentText>
-              </b>
+              Now, I lead front-end development for AI-powered video
+              applications, focusing on pushing the boundaries of what's
+              possible with video delivery. Whether it's building custom video
+              players, designing intuitive user interfaces, or optimizing
+              backend processes, I'm always hands-on with both design and code.
+              My work spans all corners of product development, while
+              collaborating with diverse teams and stakeholders.
               <LastLine>
-                So here I am,{" "}
+                At the heart of it, I’m still doing what I love—bringing ideas
+                to life through{" "}
                 <b>
-                  Designer<AccentText>.</AccentText> Developer
-                  <AccentText>.</AccentText> Human<AccentText>.</AccentText>
+                  design<AccentText>+</AccentText>code<AccentText>.</AccentText>
                 </b>
               </LastLine>
             </IntroEnd>
@@ -208,7 +242,7 @@ const About = () => {
             />
             <Timeline title={education.title} infoArray={education.info} />
           </TimelieWrapper>
-          <img src={theMakings} alt="#The-Makings" />
+          <TheMakings src={theMakings} alt="#The-Makings" />
         </QualificationsWrapper>
         <DownloadResume href={resume} target="_blank" rel="noreferrer noopener">
           Download Resume

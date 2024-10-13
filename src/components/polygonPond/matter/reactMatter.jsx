@@ -14,15 +14,9 @@ import {
 } from "matter-js";
 import { useRef, useEffect } from "react";
 import svgArray from "../MatterAssets";
-import { colors, HEIGHT, WIDTH } from "../../../constants";
+import { colors, HEIGHT, mobileBreakPoint, WIDTH } from "../../../constants";
 
 const WALLWIDTH = 0.1;
-
-function getRandomArbitrary(min, max) {
-  return 0.5 * Math.abs(max - min);
-}
-
-const starSize = getRandomArbitrary(HEIGHT, WIDTH);
 
 const wallOptions = {
   restitution: 1,
@@ -41,9 +35,10 @@ const starOptions = {
   rotate: 10,
 };
 
-const Scene = () => {
+const Scene = ({ isMobile }) => {
   const scene = useRef();
   const canvasRef = useRef(null);
+  const starSize = isMobile ? 300 : 500;
 
   const matterStarsLarge = svgArray.map((x) => {
     return Bodies.circle(
@@ -150,32 +145,32 @@ const Scene = () => {
     const mouseBody = Bodies.circle(0, 0, 150, {
       render: { fillStyle: "transparent" },
     });
-    World.add(world, mouseBody);
+    // World.add(world, mouseBody);
 
-    const mouse = Mouse.create(render.canvas);
-    const mouseConstraint = MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 0.5,
-        render: {
-          visible: true,
-        },
-      },
-    });
-    World.add(world, mouseConstraint);
+    // const mouse = Mouse.create(render.canvas);
+    // const mouseConstraint = MouseConstraint.create(engine, {
+    //   mouse: mouse,
+    //   constraint: {
+    //     stiffness: 0.5,
+    //     render: {
+    //       visible: true,
+    //     },
+    //   },
+    // });
+    // World.add(world, mouseConstraint);
 
-    const con = Constraint.create({
-      pointA: mouse.position,
-      bodyB: (mouseConstraint.body = mouseBody),
-      stiffness: 0.2,
-      damping: 1,
-      render: {
-        visible: false,
-      },
-    });
-    World.add(world, con);
+    // const con = Constraint.create({
+    //   pointA: mouse.position,
+    //   bodyB: (mouseConstraint.body = mouseBody),
+    //   stiffness: 0.2,
+    //   damping: 1,
+    //   render: {
+    //     visible: false,
+    //   },
+    // });
+    // World.add(world, con);
 
-    render.mouse = mouse;
+    // render.mouse = mouse;
   }, []);
 
   return (

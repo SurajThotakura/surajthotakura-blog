@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../constants";
+import { colors, mobileBreakPoint } from "../../constants";
 import Scene from "./matter/reactMatter";
 
 const Pond = styled.div`
@@ -7,6 +7,10 @@ const Pond = styled.div`
   width: calc(100vw - 5rem);
   padding: 6rem 2.5rem 1.5rem 2.5rem;
   border-radius: 2rem;
+  @media (max-width: ${mobileBreakPoint}) {
+    padding: 3.5rem 1rem 1.5rem 1rem;
+    width: calc(100vw - 2rem);
+  }
 `;
 const PondContent = styled.div`
   width: calc(100vw - 5rem);
@@ -21,6 +25,10 @@ const PondContent = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
+  @media (max-width: ${mobileBreakPoint}) {
+    gap: 1.5rem;
+    width: calc(100vw - 2rem);
+  }
 `;
 const PondWater = styled.div`
   position: absolute;
@@ -30,14 +38,18 @@ const PondWater = styled.div`
   border-radius: 2rem;
   background-color: ${colors.offWhite};
   overflow: hidden;
+  @media (max-width: ${mobileBreakPoint}) {
+    width: calc(100vw - 2rem);
+  }
 `;
 
 const PolygonPond = ({ children }) => {
+  const isMobile = window.innerWidth < mobileBreakPoint.slice(0, -2);
   return (
     <Pond>
       <PondContent>{children}</PondContent>
       <PondWater>
-        <Scene />
+        <Scene isMobile={isMobile} />
       </PondWater>
     </Pond>
   );
