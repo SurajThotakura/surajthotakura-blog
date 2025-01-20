@@ -1,0 +1,101 @@
+[
+  {
+    "image": "/assets/Work+Play/multiLayerVideo-preview.png",
+    "title": "Multi-Layered Videos",
+    "description": "Novel video delivery architecture to enhance user experience",
+    "technologies": [
+      "/assets/Work+Play/React-icon.svg",
+      "/assets/Work+Play/xstate.svg"
+    ],
+    "links": [
+      {
+        "url": "https://www.tdcommons.org/dpubs_series/7246/",
+        "label": "Read More"
+      }
+    ]
+  },
+  {
+    "image": "/assets/Work+Play/GitPad.png",
+    "title": "GitPad",
+    "description": "Rich text editor featuring Git-like branching",
+    "technologies": [
+      "/assets/Work+Play/React-icon.svg",
+      "/assets/Work+Play/jotai.svg",
+      "/assets/Work+Play/tailwind.svg"
+    ],
+    "links": [
+      {
+        "url": "https://gitpad.surajthotakura.com/",
+        "label": "Write"
+      },
+      {
+        "url": "https://github.com/SurajThotakura/gitPad",
+        "label": "GitHub"
+      }
+    ]
+  },
+  {
+    "image": "/assets/Work+Play/boringo-preview.jpeg",
+    "title": "Boringo!",
+    "description": "Bored of life? Make a game out of it!",
+    "technologies": [
+      "/assets/Work+Play/React-icon.svg",
+      "/assets/Work+Play/tailwind.svg"
+    ],
+    "links": [
+      {
+        "url": "https://boringo.surajthotakura.com",
+        "label": "Play"
+      },
+      {
+        "url": "https://github.com/SurajThotakura/Boringo",
+        "label": "GitHub"
+      }
+    ]
+  },
+  {
+    "image": "/assets/Work+Play/boardsmash-preview.png",
+    "title": "Board Smash",
+    "description": "Brace yourselves and click-clack! Test your typing speed on this typing test game.",
+    "technologies": ["/assets/Work+Play/javascript.svg"],
+    "links": [
+      {
+        "url": "https://boardsmash.surajthotakura.com",
+        "label": "Smash"
+      },
+      {
+        "url": "https://github.com/SurajThotakura/boardsmash-js",
+        "label": "GitHub"
+      }
+    ]
+  },
+  {
+    "image": "/assets/Work+Play/doMath-preview.png",
+    "title": "doMath",
+    "description": "Make your brain sweat it out with a fun math game.",
+    "technologies": ["/assets/Work+Play/React-icon.svg"],
+    "links": [
+      {
+        "url": "https://domath.surajthotakura.com",
+        "label": "Solve"
+      },
+      {
+        "url": "https://github.com/SurajThotakura/doMATH",
+        "label": "GitHub"
+      }
+    ]
+  },
+  {
+    "image": "/assets/Work+Play/keyboards-preview.png",
+    "title": "Keyboards",
+    "description": "The clicks and clacks I love.",
+    "technologies": [],
+    "links": [
+      {
+        "url": "/inProgress",
+        "label": "Read More",
+        "isInternal": true
+      }
+    ]
+  }
+]
