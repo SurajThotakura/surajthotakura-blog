@@ -7,7 +7,7 @@ import PSP from "/assets/about/PSP.svg";
 import atmos from "/assets/about/atmos.svg";
 import college from "/assets/about/college.svg";
 import theMakings from "/assets/about/theMakings.svg";
-import resume from "/assets/about/Suraj2024Resume.pdf";
+import resume from "/assets/about/resume.pdf";
 import HeartBeat from "../../../../components/minorComponents/heartBeat";
 import { Fragment } from "react";
 import { colors, mobileBreakPoint } from "../../../../constants";
@@ -157,9 +157,15 @@ const workExperience = {
   info: [
     {
       institute: "Cisco",
+      qualification: "Product Manager",
+      from: 2024,
+      to: "Present",
+    },
+    {
+      institute: "Cisco",
       qualification: "Software Engineer",
       from: 2023,
-      to: "Present",
+      to: 2024,
     },
     {
       institute: "Cisco",
@@ -217,13 +223,11 @@ const About = () => {
           <IntroContent>
             <StoryBlock storyLine={storyLine} />
             <IntroEnd>
-              Now, I lead front-end development for AI-powered video
-              applications, focusing on pushing the boundaries of what's
-              possible with video delivery. Whether it's building custom video
-              players, designing intuitive user interfaces, or optimizing
-              backend processes, I'm always hands-on with both design and code.
-              My work spans all corners of product development, while
-              collaborating with diverse teams and stakeholders.
+              Now, I’m a product manager at Webex, working on AI Agent
+              integrations and voice experiences. With a background in design
+              and engineering, I'm always hands-on with both design and code. My
+              work spans all corners of product development, while collaborating
+              with diverse teams and stakeholders.
               <LastLine>
                 At the heart of it, I’m still doing what I love—bringing ideas
                 to life through{" "}
